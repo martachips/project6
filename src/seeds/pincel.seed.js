@@ -63,9 +63,7 @@ const pincelesData = [
 const pincelDocument = pincelesData.map((pincel) => new PINCELES(pincel));
 
 mongoose
-  .connect(
-    'mongodb+srv://martamrg93:fkpb53d1GDVdhVGP@project6.j8xk6bg.mongodb.net/?retryWrites=true&w=majority&appName=Project6'
-  )
+  .connect(process.env.DB_URL)
   .then(async () => {
     const allPinceles = await PINCELES.find();
     if (allPinceles.length) {
