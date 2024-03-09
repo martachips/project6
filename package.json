@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "seed": "node ./src/seeds/pincel.seed.js"
   },
   "description": "",
   "dependencies": {
